@@ -57,9 +57,9 @@ this.$session.destroy();
 1. main.js
 ```js
 import Vue from 'vue'
-import Session from 'vue-session'
+import VueSession from 'vue-session'
 
-Vue.use(Session,{
+Vue.use(VueSession,{
   maxAge:1000*60*60*24,
   prefix:'app'
 });
@@ -92,7 +92,8 @@ Vue.use(Session,{
 3. profile.vue
 ```vue
 <script>
-  import Session from 'vue-session'
+  import VueSession from 'vue-session'
+  import AuthService from '../auth.service'
   export default{
       data(){
         return {
@@ -103,11 +104,20 @@ Vue.use(Session,{
         //in beforeRouteEnter hook
         //we can not access `this`
         //but can access session via Session's static method `getInstance`
-        let session=Session.getInstance();
+        let session=VueSession.getInstance();
         if(session.signedin){
           return next();
         }
         next('/signin');
+      },
+      methods:{
+        onSignoutButtonClick(){
+          AuthService.signout()
+            .then(()=>{
+              this.$session.destroy();
+              this.$router.push('/signin');
+            });
+        }
       }
     }
 </script>
