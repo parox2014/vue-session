@@ -2,7 +2,7 @@ var path=require('path');
 var webpack=require('webpack');
 
 module.exports={
-  entry:'./src/index.js',
+  entry:'./src/session.js',
   output:{
     path:path.join(__dirname,'./dist/'),
     filename:'vue-session.js',
@@ -20,6 +20,7 @@ module.exports={
       }
     ]
   },
+  devtool:'#eval-source-map',
   plugins:[
     new webpack.optimize.UglifyJsPlugin({
       compress: {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue Session Demo</title>
+</head>
+<body>
+<script src="./dist/vue-session.js"></script>
+<script>
+  var session=new VueSession.Session(1000*10);
+  var session2=VueSession.getInstance(22333);
+  
+  console.log('session===session2',session===session2);
+  console.log(session.signedin)
+  
+  session.regenerate('thisisasessionstring');
+  console.log(session.signedin);
+  console.log(session.token);
+  console.log(localStorage.getItem(session.tokenKey));
+  
+//  session.destroy();
+//  console.log(session.signedin);
+  
+  setInterval(function () {
+    console.log(session.signedin);
+  },1000)
+</script>
+</body>
+</html>
