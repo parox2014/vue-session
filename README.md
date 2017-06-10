@@ -89,7 +89,7 @@ Vue.use(Session,{
   }
 </script>
 ```
-2. profile.vue
+3. profile.vue
 ```vue
 <script>
   import Session from 'vue-session'
@@ -122,7 +122,7 @@ Vue.use(Session,{
   2. `createAt` property,readonly;
   3. `signedin` property,readonly;
   4. `regenerate` method,call it to generate session;
-  5. `destory` method,call it to destroy session;
+  5. `destroy` method,call it to destroy session;
 
 ### Test
 ```

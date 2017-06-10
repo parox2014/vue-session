@@ -1,6 +1,6 @@
 {
-  "name": "vue-session",
-  "version": "1.0.0",
+  "name": "dwy-vue-session",
+  "version": "1.0.1",
   "description": "A vue front-end session plugin",
   "main": "dist/vue-session.js",
   "scripts": {
@@ -12,14 +12,10 @@
     "url": "git@github.com:parox2014/vue-session.git"
   },
   "keywords": [
-    "cache",
-    "cachejs",
-    "lru",
-    "lfu",
-    "fifo",
-    "lru cache",
-    "lfu cache",
-    "fifo cache"
+    "session",
+    "vue-session",
+    "front-end-session",
+    "vue-plugin"
   ],
   "author": "William Du",
   "license": "MIT",
