@@ -5,7 +5,7 @@
 ### Install
 
 ```
-$ npm install vue-session --save
+$ npm install dwy-vue-session --save
 ```
 ### Import
 
@@ -19,20 +19,20 @@ $ npm install vue-session --save
 ##### es2015
 
 ```js
-  import Session from 'vue-session'
+  import Session from 'dwy-vue-session'
 ```
 
 ##### cmd
 
 ```js
-  var VueSession=require('vue-session');
+  var VueSession=require('dwy-vue-session');
 ```
 
 ### Usage
 
 ####
 ```js
-import Session from 'vue-session'
+import VueSession from 'dwy-vue-session'
 
 //in main.js,mount Session's instance to Vue's prototype via Vue.use
 //then you can access session via every Vue's instance
@@ -57,7 +57,7 @@ this.$session.destroy();
 1. main.js
 ```js
 import Vue from 'vue'
-import VueSession from 'vue-session'
+import VueSession from 'dwy-vue-session'
 
 Vue.use(VueSession,{
   maxAge:1000*60*60*24,
@@ -92,7 +92,7 @@ Vue.use(VueSession,{
 3. profile.vue
 ```vue
 <script>
-  import VueSession from 'vue-session'
+  import VueSession from 'dwy-vue-session'
   import AuthService from '../auth.service'
   export default{
       data(){

@@ -1,6 +1,6 @@
 {
   "name": "dwy-vue-session",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A vue front-end session plugin",
   "main": "dist/vue-session.js",
   "scripts": {
