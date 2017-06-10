@@ -18,8 +18,8 @@ export class Session{
     this.__maxAge__=maxAge;
     this.__prefix__=prefix;
     this.__storage__=storage;
-    this.__token__=null;
-    this.__createAt__=null;
+    this.__token__=storage.getItem(this.tokenKey);
+    this.__createAt__=storage.getItem(this.createTimeKey);
     session=this;
   }
   
