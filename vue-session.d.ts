@@ -1,12 +1,12 @@
-namespace VueSession{
+declare module VueSession{
   
-  interface getInstance{
+  interface GetInstance{
     (maxAge?:number,prefix?:string):Session
   }
   
-  const getInstance:getInstance;
+  export const getInstance:GetInstance;
   
-  class Session {
+  export class Session {
     constructor(maxAge?:number,prefix?:string);
     private __token__:string;
     private __createAt__:number;
@@ -22,7 +22,7 @@ namespace VueSession{
     
     regenerate(token:string):void;
     destroy():void;
-    static getInstance:getInstance;
+    static getInstance:GetInstance;
     static install(Vue:any,{maxAge,prefix}:{maxAge:number;prefix:string;}):void;
   }
 }

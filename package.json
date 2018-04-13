@@ -1,6 +1,6 @@
 {
   "name": "dwy-vue-session",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A vue front-end session plugin",
   "main": "dist/vue-session.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git@github.com:parox2014/vue-session.git"
   },
+  "typings":"./vue-session.d.ts",
   "keywords": [
     "session",
     "vue-session",
