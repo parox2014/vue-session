@@ -48,7 +48,19 @@ export class Session{
     let now=Date.now();
     return !!token&&!!createAt&&(now-createAt<maxAge);
   }
-  
+  static regenerate(token){
+    session.regenerate(token);
+  }
+  static destroy(){
+    session.destroy();
+  }
+  static get signedin(){
+    return session.signedin;
+  }
+
+  static get token(){
+    return session.token;
+  }
   regenerate(token){
     let storage=this.__storage__;
     let createAt=Date.now();
